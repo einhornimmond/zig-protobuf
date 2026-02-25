@@ -54,7 +54,7 @@ pub fn getProtocDependency(b: *std.Build) !?*std.Build.Dependency {
 
     const arch: ?[]const u8 = switch (builtin.cpu.arch) {
         .powerpcle, .powerpc64le => "ppcle",
-        .aarch64, .aarch64_be => "aarch_64",
+        .aarch64, .aarch64_be, .arm => "aarch_64",
         .s390x => "s390",
         .x86_64 => "x86_64",
         .x86 => "x86_32",
